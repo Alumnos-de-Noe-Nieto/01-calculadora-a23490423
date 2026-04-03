@@ -36,4 +36,10 @@ def validar_repeticiones_icxm(cadena: str) -> bool:
         >>> validar_repeticiones_icxm("MMMM")
         False
     """
-    raise NotImplementedError()
+
+    prohibidos = ["IIII", "XXXX", "CCCC", "MMMM"]
+
+    # Revisamos si alguno de estos patrones está en la cadena
+    return all(patron not in cadena for patron in prohibidos)
+
+    return True

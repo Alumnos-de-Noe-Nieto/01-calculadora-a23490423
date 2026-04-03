@@ -34,4 +34,7 @@ def validar_repeticiones_vld(cadena: str) -> bool:
         >>> validar_repeticiones_vld("DD")
         False
     """
-    raise NotImplementedError()
+    prohibidos = ["VV", "LL", "DD"]
+
+    # Buscamos si alguno existe en la cadena
+    return all(patron not in cadena for patron in prohibidos)
